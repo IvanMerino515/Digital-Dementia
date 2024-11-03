@@ -26,70 +26,158 @@ margin-bottom: 0;
 }
 
 body{
-background-color: black;
-border: 4px solid #E7E5E1;
-padding: 16px 16px 16px 16px;
-border-bottom: 0px;
-margin: 0px;
-color: #E7E5E1;
-font-family: "Montserrat", sans-serif;
+background-color: #BEBAB7;
+
+}
+.container{
+display: flex;
+align-items: self-end;
+position: inherit;
+
+
+}
+
+.boxlogo{
+display: flex;
+width: 396px;
+height: 507px;
+background-color: #222220;
+cursor: url(../assets/images/cursor-white.png), auto;
+position:fixed;
+margin-top: -40px;
+    
+}
+
+.personal-data{
+display: flex;
+flex-direction: column;
+position: absolute;
+margin-top: 50px;
+font-family: "IBM Plex Mono";
+font-size: 14px;
+font-weight: 500;
+padding-left: 12px;
+color: #BEBAB7;
+        
+}
+        
+.url{
+position: absolute;
+margin-top: 120px;
+margin-left: 170px;
+color: #BEBAB7;
+font-family: "IBM Plex Mono";
+font-size: 16px;
+font-weight: 500;
+padding-left: 12px;
+}
+.url::after{
+content: "";
+position: inherit;
+width: 157px;
+height: 1px;
+margin-top: 10px;
+margin-left: -343px;
+background-color: #BEBAB7;
+}
+            
+.social{
+display: flex;
+flex-direction: column;
+margin-top: 360px;
+padding-left: 12px;
+color: #BEBAB7;
+font-family: "IBM Plex Mono";
+font-size: 16px;
+line-height: 2;
+            
+}
+.box{
+width: 416px;
+border-bottom: 1px #222220 solid;
+overflow-x: hidden!important;
+padding-left: 10px;
+padding-right: 10px;
+                
+}
+
+.mono{
+margin-top: 384px;
+margin-left: 873px ;
+width: 411px;
+height: 349px;
+cursor: grab;
+
+}
+
+.clone{
+position: absolute;
+pointer-events: none;
+width: 100px;
+height: auto;
 
 }
 
 .menu{
 display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+justify-content: end;
+font-family: "IBM Plex Mono";
+margin-right: 19px;
+margin-top: 19px;
+color: #222220;
+font-size: 24px;
+font-weight: 500;
+cursor:pointer;
+}
+
+.menus{
 font-size: 16px;
-font-weight: 300;
-text-align: left;
-padding-top: 20px;
-margin-bottom: 50px;
+font-family: "IBM Plex Mono";
+margin-top: 360px;
+cursor: pointer;
 }
 
-
-.menu-section-2, .menu-section-3, .menu-section-4 {
-display: none;
+/* Estilos de modo oscuro */
+body.dark-mode {
+    background-color: #222220; /* Fondo oscuro */
 }
 
-@media screen and (width>768px) {
-.menu-section-2, .menu-section-3, .menu-section-4{
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding-top: none;
-margin-left: 20px;
-margin-right: 20px;
-
+body.dark-mode .text-primary {
+    color: #BEBAB7; /* Color de texto claro */
 }
+
+body.dark-mode .background-primary {
+    background-color: #BEBAB7; /* Fondo claro para el modo oscuro */
+}
+
+menu.dark-mode{
+    color: #BEBAB7;
+}
+
+.personal-data.dark-mode{
+    color: #222220;
+}
+
+.menus.dark-mode{
+   color: #BEBAB7; 
+}
+
+/* Clase para subrayar el modo activado */
+.active {
+    text-decoration: underline;
+    font-weight: bold; /* Opcional para resaltar más */
     
 }
 
-.menu-section-1{
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding-top: none;
+/* Cambia el fondo y el color del texto en el modo oscuro */
+body.dark-mode .boxlogo {
+    background-color: #BEBAB7; /* Fondo claro en modo oscuro */
 }
 
-@media screen and (width>768px) {
-.menu-section-5{
-display: none;
-}
+body.dark-mode .boxlogo .text-primary {
+    color: #222220; /* Texto oscuro en modo oscuro */
 }
 
-.container{
-display: flex;
-justify-content: space-between;
-
-
-}
-
-.main-video{
-margin-top: 0px;
-display: flex;
-position: inherit;
-}
-
+body.dark-mode .boxlogo .url::after {
+    background-color: #222220; }
 

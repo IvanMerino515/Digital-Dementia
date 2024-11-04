@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.
     0">
-  <!-- Kode Mono font -->
+  <!-- montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <!-- Ibm Plex font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,52 +17,59 @@
 </head>
 <body>
 
-<span class="menu text-primary" id="menu" >Menú</span>
-
 
 <!-- La tarjeta del logo -->
+ <h1 class="logo text-primary dementia-mode-text" >Digital Dementia</h1>
 <div class="boxlogo background-primary" >
     <div class="personal-data text-primary">
-        <span>IVÁN MERINO DÍAZ</span>
-        <span>UX/UI</span>
-        <span>FRONTED DESIGNER</span>
+        <span class="change dementia-mode-text" >IVÁN MERINO DÍAZ</span>
+        <span class="change dementia-mode-text" >UX/UI</span>
+        <span class="change dementia-mode-text" >FRONTED DESIGNER</span>
     </div>
-    <span class="url text-primary">DigitalDementia.es</span>
+    <span class="url text-primary change dementia-mode-text">DigitalDementia.es</span>
     <div class="social text-primary">
-        <span>Twitter</span>
-        <span>Instagram</span>
-        <span>Spotify</span>
+        <span class="change dementia-mode-text" >Twitter</span>
+        <span class="change dementia-mode-text" >Instagram</span>
+        <span class="change dementia-mode-text">Spotify</span>
     </div>
 </div>  
 
-<section class="container" id="container">
+<div class="menudd">
+    <a class="change text-primary dementia-mode-text">About</a>
+    <a class="change text-primary dementia-mode-text menu-item" >Dementias</a>
+    <a class="change text-primary dementia-mode-text menu-item" >UI Prototypes</a>
+    <a class="change text-primary dementia-mode-text menu-item" >Ux Case Study</a>
+    <a class="change text-primary dementia-mode-text menu-item" >Music Poster </a>
+    <a class="change text-primary dementia-mode-text menu-item" >Works</a>
 
-
-<img class="mono" id="draggable-mono" src="./assets/mono.gif" alt="gif de mono">
-
-
-
-</section>
-
-<section class="menus text-primary" id="menus">
-<div class="modes">
-    <div class="dark-mode"></div>
-    <span class="dark-mode-text"> Dark Mode</span>
-    <span class="dark-mode-on" >ON</span>
-    <span class="dark-mode-off" >OFF</span>
-    </div>
-    <div class="dementia-mode"></div>
-    <span class="dementia-mode-text"> Dementia Mode</span>
-    <span class="dementia-mode-on" >ON</span>
-    <span class="dementia-mode-off" >OFF</span>
-    </div>
 </div>
 
-</section>
+
+
+<div class="contact dementia-mode-text">
+    <a class="text-contact change dementia-mode-text" href="#">Contacto</a>
+</div>
 
 
 
- 
+
+
+ <footer class="footer">
+    <section class="menus text-primary " id="menus">
+        <div class="modes">
+            <div class="dark-mode"></div>
+            <span class="dark-mode-text dementia-mode-text"> Dark Mode</span>
+            <span class="dark-mode-on dementia-mode-text" >ON</span>
+            <span class="dark-mode-off dementia-mode-text" >OFF</span>
+            </div>
+            <div class="dementia-mode "></div>
+            <span class="dementia-mode-text "> Dementia Mode</span>
+            <span class="dementia-mode-on dementia-mode-text" >ON</span>
+            <span class="dementia-mode-off dementia-mode-text" >OFF</span>
+            </div>
+        </div>
+    </section>
+ </footer>
 <script src="./js/scripts.js" ></script>    
 </body>
 </html>

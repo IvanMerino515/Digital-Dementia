@@ -135,17 +135,34 @@ font-size: 16px;
 
 
 
+.footer{
+display: flex;
+width: 100%;
+justify-content: space-between;
+}
 
 
 
 
-
-.menus{
+.menus {
 font-size: 16px;
 font-family: "IBM Plex Mono";
 cursor: pointer;
 padding-bottom: 19px;
 }
+
+.mouse-coordinates{
+display: flex;
+justify-content: end;
+align-content: end;
+align-items: end;
+font-size: 12px;
+font-family: "IBM Plex Mono";
+padding-bottom: 19px;
+padding-right: 24px;
+
+}
+
 
 
 

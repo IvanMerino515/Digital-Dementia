@@ -36,7 +36,7 @@ function replaceVowelsWithSymbols(text) {
 document.querySelectorAll('.change').forEach(element => {
     const originalText = element.textContent; // Guarda el texto original
 
-    // Evento para cuando el cursor pasa sobre el texto
+    // Evento para cuando el cursor pase sobre el texto
     element.addEventListener('mouseenter', () => {
         element.textContent = replaceVowelsWithSymbols(originalText);
     });
@@ -215,3 +215,12 @@ dementiaModeOff.addEventListener('click', () => {
         delete element.dataset.split; // Elimina la marca para el próximo uso
     });
 });
+
+// Escuchar el evento de movimiento del ratón
+document.addEventListener("mousemove", (event) => {
+    const mouseCoordinatesDiv = document.querySelector(".mouse-coordinates");
+    
+    // Actualizar el texto del div con las coordenadas del ratón
+    mouseCoordinatesDiv.textContent = `EjeX: ${event.clientX}px EjeY: ${event.clientY}px`;
+  });
+  

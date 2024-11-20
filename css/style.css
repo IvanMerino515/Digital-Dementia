@@ -52,6 +52,17 @@ color: #222220;
 
 }
 
+@media screen and (width < 768px){
+.logo{
+margin-top: 0;
+font-size: 45px;
+line-height: 0.9;  
+}
+}
+
+    
+
+
 .boxlogo{
 display: flex;
 width: 396px;
@@ -75,6 +86,11 @@ padding-left: 12px;
 color: #222220;
         
 }
+@media screen and (width < 768px){
+.personal-data{
+margin-top: 100px;    
+}
+}
         
 .url{
 position: absolute;
@@ -95,7 +111,13 @@ margin-top: 10px;
 margin-left: -343px;
 background-color: #222220;
 }
-            
+
+@media screen and (width < 768px){
+.url{
+margin-top: 600px;    
+}
+}
+
 .social{
 display: flex;
 flex-direction: column;
@@ -120,6 +142,63 @@ font-weight: 700;
 font-size: 16px;
 
 }
+
+.menu{
+margin-top: 12px;
+margin-right: 24px;
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 19px;
+font-family: "IBM Plex Mono";
+color: #222220;
+font-weight: 700;
+font-size: 16px;
+display: none;
+}
+
+/* @media screen and (width < 768px){
+.menudd{
+display: none;
+margin-top: 200px;
+}
+.menu{
+margin-top: -20px;
+margin-right: 24px;
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 19px;
+font-family: "IBM Plex Mono";
+color: #222220;
+font-weight: 500;
+font-size: 16px;
+}
+} */
+
+
+
+
+.menu {
+    display: none; /* Ocultar menú inicialmente */
+    margin-top: -20px;
+    margin-right: 24px;
+    flex-direction: column;
+    align-items: end;
+    gap: 19px;
+    font-family: "IBM Plex Mono";
+    color: #222220;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .menudd {
+    margin-top: 130px;
+    }
+}
+
+
 
  /* .menu-item:hover{
     width: 600px;

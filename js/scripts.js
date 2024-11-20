@@ -22,6 +22,31 @@ darkModeOff.addEventListener('click', () => {
     darkModeOn.classList.remove('active');
 });
 
+// // Define el mapeo de vocales a símbolos
+// const symbolMap = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '$', '%', '&'];
+
+// // Función para reemplazar las vocales con símbolos aleatorios
+// function replaceVowelsWithSymbols(text) {
+//     return text.replace(/[aeiouAEIOU]/g, () => {
+//         return symbolMap[Math.floor(Math.random() * symbolMap.length)];
+//     });
+// }
+
+// // Función para activar el efecto en los elementos con clase "change"
+// document.querySelectorAll('.change').forEach(element => {
+//     const originalText = element.textContent; // Guarda el texto original
+
+//     // Evento para cuando el cursor pasa sobre el texto
+//     element.addEventListener('mouseenter', () => {
+//         element.textContent = replaceVowelsWithSymbols(originalText);
+//     });
+
+//     // Evento para cuando el cursor sale del texto
+//     element.addEventListener('mouseleave', () => {
+//         element.textContent = originalText; // Restaura el texto original
+//     });
+// });
+
 // Define el mapeo de vocales a símbolos
 const symbolMap = ['#', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '$', '%', '&'];
 
@@ -32,20 +57,77 @@ function replaceVowelsWithSymbols(text) {
     });
 }
 
-// Función para activar el efecto en los elementos con clase "change"
-document.querySelectorAll('.change').forEach(element => {
-    const originalText = element.textContent; // Guarda el texto original
+// Función para habilitar el efecto de hover (para pantallas mayores a 768px)
+function enableHoverEffect() {
+    document.querySelectorAll('.change').forEach(element => {
+        const originalText = element.textContent; // Guarda el texto original
 
-    // Evento para cuando el cursor pasa sobre el texto
-    element.addEventListener('mouseenter', () => {
-        element.textContent = replaceVowelsWithSymbols(originalText);
-    });
+        // Evento para cuando el cursor pasa sobre el texto
+        element.addEventListener('mouseenter', () => {
+            element.textContent = replaceVowelsWithSymbols(originalText);
+        });
 
-    // Evento para cuando el cursor sale del texto
-    element.addEventListener('mouseleave', () => {
-        element.textContent = originalText; // Restaura el texto original
+        // Evento para cuando el cursor sale del texto
+        element.addEventListener('mouseleave', () => {
+            element.textContent = originalText; // Restaura el texto original
+        });
     });
+}
+
+// Función para habilitar el efecto cíclico (para pantallas menores a 768px)
+function enableCyclicEffect() {
+    document.querySelectorAll('.change').forEach(element => {
+        const originalText = element.textContent; // Guarda el texto original
+
+        // Configuración cíclica: alternar el texto cada 3 segundos
+        setInterval(() => {
+            const currentText = element.textContent;
+            if (currentText === originalText) {
+                element.textContent = replaceVowelsWithSymbols(originalText);
+            } else {
+                element.textContent = originalText; // Restaura el texto original
+            }
+        }, 700); // Intervalo de 3 segundos
+    });
+}
+
+// Función para verificar el tamaño de pantalla y aplicar el efecto adecuado
+function applyEffectBasedOnScreenSize() {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        enableCyclicEffect(); // Efecto cíclico para móviles
+    } else {
+        enableHoverEffect(); // Efecto hover para pantallas grandes
+    }
+}
+
+// Ejecutar la función al cargar la página
+applyEffectBasedOnScreenSize();
+
+// Escuchar cambios en el tamaño de la pantalla y ajustar los efectos
+window.addEventListener('resize', () => {
+    location.reload(); // Recargar la página para evitar conflictos entre efectos
 });
+
+
+// entrada
+document.addEventListener('DOMContentLoaded', () => {
+    const typewriter = document.getElementById('typewriter');
+    const text = "Ad astra per Dementia";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            typewriter.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 300); // Ajusta la velocidad (en ms)
+        }
+    }
+
+    typeEffect();
+});
+
+
+
 
 // POINTER CONTACTO
 // Selecciona el elemento que queremos mover

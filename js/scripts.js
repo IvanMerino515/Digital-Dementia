@@ -215,3 +215,5 @@ dementiaModeOff.addEventListener('click', () => {
         delete element.dataset.split; // Elimina la marca para el próximo uso
     });
 });
+
+

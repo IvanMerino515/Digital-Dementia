@@ -109,26 +109,6 @@ window.addEventListener('resize', () => {
 });
 
 
-// entrada
-document.addEventListener('DOMContentLoaded', () => {
-    const typewriter = document.getElementById('typewriter');
-    const text = "Ad astra per Dementia";
-    let index = 0;
-
-    function typeEffect() {
-        if (index < text.length) {
-            typewriter.textContent += text[index];
-            index++;
-            setTimeout(typeEffect, 300); // Ajusta la velocidad (en ms)
-        }
-    }
-
-    typeEffect();
-});
-
-
-
-
 // POINTER CONTACTO
 // Selecciona el elemento que queremos mover
 const floatingElement = document.querySelector('.contact');

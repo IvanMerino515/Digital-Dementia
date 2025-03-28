@@ -31,37 +31,19 @@ background-color: #BEBAB7;
 }
 
 
-.container{
-display: flex;
-align-items: self-end;
-position: inherit;
-
-
-}
 
 .logo{
 display: flex;
-align-content: center;
-justify-content: center;
+align-content: flex-start;
+justify-content: left;
 font-family: "Roboto", serif;
 font-weight: 900;
-font-size: 20vh;
-text-align: center;
-margin-top: -20px;
+font-size: 5vh;
+text-align: left;
+margin-top: 20px;
+padding-left: 10px;
 color: #222220;
-
 }
-
-@media screen and (width < 768px){
-.logo{
-margin-top: 0;
-font-size: 45px;
-line-height: 0.9;  
-}
-}
-
-    
-
 
 .boxlogo{
 display: flex;
@@ -69,39 +51,45 @@ width: 396px;
 height: 507px;
 position: fixed;
 color: #22222000;
-margin-top: -100px;
-    
+margin-top: 0px;
 }
 
 .personal-data{
-display: flex;
-flex-direction: column;
+ display: flex;
+flex-direction: row;
 position: absolute;
-margin-top: 50px;
+margin-top: -20px;
 font-family: "IBM Plex Mono";
 font-size: 14px;
 gap: 8px;
 font-weight: 500;
 padding-left: 12px;
-color: #222220;
-        
+color: #222220;                
 }
+       
+
 @media screen and (width < 768px){
 .personal-data{
 margin-top: 100px;    
 }
 }
-        
+
+.box-personal{
+display: flex;
+flex-direction: column;
+gap:8px;
+}
+    
 .url{
 position: absolute;
-margin-top: 250px;
+margin-top: 60px;
 margin-left: 170px;
 color: #222220;
 font-family: "IBM Plex Mono";
 font-size: 16px;
 font-weight: 500;
 padding-left: 12px;
-}
+}  
 .url::after{
 content: "";
 position: inherit;
@@ -111,12 +99,12 @@ margin-top: 10px;
 margin-left: -343px;
 background-color: #222220;
 }
-
+    
 @media screen and (width < 768px){
 .url{
 margin-top: 600px;    
 }
-}
+}   
 
 .social{
 display: flex;
@@ -127,123 +115,71 @@ color: #222220;
 font-family: "IBM Plex Mono";
 font-size: px;
 line-height: 2;
-            
 }
 
 .menudd{
-margin-top: 12px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 700;
-font-size: 16px;
-
-}
-
-.menu{
-margin-top: 12px;
-margin-right: 24px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 700;
-font-size: 16px;
-display: none;
-}
-
-/* @media screen and (width < 768px){
-.menudd{
-display: none;
-margin-top: 200px;
-}
-.menu{
-margin-top: -20px;
-margin-right: 24px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 500;
-font-size: 16px;
-}
-} */
-
-
-
-
-.menu {
-    display: none; /* Ocultar menú inicialmente */
-    margin-top: -20px;
-    margin-right: 24px;
+    margin-top: 120px;
+    display: flex;
+    padding-right: 20px;
     flex-direction: column;
     align-items: end;
     gap: 19px;
     font-family: "IBM Plex Mono";
     color: #222220;
-    font-weight: 500;
+    font-weight: 700;
+    width: 100%;
     font-size: 16px;
-}
+    position: fixed;
 
-@media screen and (max-width: 768px) {
-    .menudd {
-    margin-top: 130px;
     }
+    
+.menu{
+margin-top: 12px;
+margin-right: 24px;
+display: flex;
+flex-direction: column;
+align-items: end;
+gap: 19px;
+font-family: "IBM Plex Mono";
+color: #222220;
+font-weight: 700;
+font-size: 16px;
+display: none;
 }
 
+/* .contenido{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 380px;
+margin-right: 180px;
+font-family: "IBM Plex Mono";
+background-color: red;
+} */
+
+/* galeria */
 
 
- /* .menu-item:hover{
-    width: 600px;
-    justify-content: center;
-    align-content: center;
-    height: 30px;
-    background-color: #222220;
-    color: #BEBAB7;
-    transition: 0.4;
-    text-align: right;    
-    
-}  */
+.contenido{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 8px;
+max-width: 900px;
+margin-left: 500px;
+}
 
-
+.image{
+width: 100%;
+height: auto;
+}
+/* fin de galeria */
 
 .footer{
 display: flex;
 width: 100%;
 justify-content: space-between;
+margin-top: 60vh;
 }
-
-
-
-
-.menus {
-font-size: 16px;
-font-family: "IBM Plex Mono";
-cursor: pointer;
-padding-bottom: 19px;
-}
-
-.mouse-coordinates{
-display: flex;
-justify-content: end;
-align-content: end;
-align-items: end;
-font-size: 12px;
-font-family: "IBM Plex Mono";
-padding-bottom: 19px;
-padding-right: 24px;
-
-}
-
-
-
 
 /* Estilos de modo oscuro */
 body.dark-mode {
@@ -307,10 +243,11 @@ font-family: "IBM Plex Mono";
 
 .footer{
 position: absolute;
-bottom: 0;
+bottom: 0px ;
 width: 100%; 
+position: fixed;
 margin-left: 10px;
-
+padding-bottom: 12px;
 }
 
 .change{

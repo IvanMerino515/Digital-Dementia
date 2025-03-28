@@ -278,4 +278,24 @@ dementiaModeOff.addEventListener('click', () => {
     });
 });
 
+const images = [
+    './assets/posters/osoees25may.png',
+    './assets/posters/slowdive.png',
+    './assets/posters/turnstile.png',
+    './assets/posters/raveonettes.png',
+    './assets/posters/botanico.png',
+    './assets/posters/sss.png'
+
+];
+
+const contenido = document.getElementById('contenido');
+
+images.forEach(src =>{
+    const img = document.createElement('img');
+    img.src = src;
+    img.classList.add('image');
+    contenido.appendChild(img);
+});
+
+
 

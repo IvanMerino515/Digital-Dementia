@@ -262,3 +262,46 @@ body.dementia-mode {
     background-image: url(../assets/mono2.gif) ;
     background-size: cover; /* Fondo oscuro para contraste */
 }
+
+
+/* PAGINA ABOUT */
+.content-about{
+font-family: "IBM Plex Mono" ;
+font-size: 14px;
+display: flex;
+margin-left: 300px;
+gap: 24px;
+margin-right: 300px;
+margin-top: 200px;
+
+}
+
+.photo-about{
+width: 200px;
+height: 200px;
+padding: 12px;
+}
+
+.skills-about{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 32px;
+max-width: 60%;
+font-family:"IBM Plex Mono";
+margin-left: 300px;
+}
+
+.skills{
+font-weight: 600;
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    font-size: 14px;
+    margin-bottom: 5px;
+}

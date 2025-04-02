@@ -265,6 +265,14 @@ body.dementia-mode {
 
 
 /* PAGINA ABOUT */
+
+.diy{
+width: 90px;
+height: 90px;
+margin-left: 900px;
+margin-top: 300px;
+}
+
 .content-about{
 font-family: "IBM Plex Mono" ;
 font-size: 14px;
@@ -293,7 +301,6 @@ margin-left: 300px;
 
 .skills{
 font-weight: 600;
-
 }
 
 ul{

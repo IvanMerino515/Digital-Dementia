@@ -131,31 +131,77 @@ line-height: 2;
 }
 
 .menudd{
-margin-top: 12px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 700;
-font-size: 16px;
+    margin-top: 120px;
+    display: flex;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: end;
+    gap: 19px;
+    font-family: "IBM Plex Mono";
+    color: #222220;
+    font-weight: 700;
+    width: 100%;
+    font-size: 16px;
+    position: fixed;
+    
+    }
 
+    @media screen and (width < 768px){
+        .menudd{
+      display: none;
+
+        }  
+    
+    }
+
+/* Estilos para el botón flotante */
+
+
+.menu-button{
+    display: none;
+}
+@media screen and (width < 768px){
+    .menu-button{
+    position: fixed;
+    bottom: 124px;
+    right: 24px;
+    width: 80px; /* Tamaño más accesible para clics */
+    height: 80px;
+    background-color: #222220;
+    color: #BEBAB7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    cursor: pointer;
+    }
 }
 
-.menu{
-margin-top: 12px;
-margin-right: 24px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 700;
-font-size: 16px;
-display: none;
+.mobile-menu{
+    display: none;
 }
+@media screen and (width < 768px){
+  .mobile-menu{
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background-color: #BEBAB7;
+    color: #222220;
+    padding: 10px;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    gap: 10px;
+    font-family: "IBM Plex Mono";  
+    text-align: right;
+  } 
+  
+  .mobile-menu.active {
+    display: flex;
+}
+}
+
 
 /* @media screen and (width < 768px){
 .menudd{
@@ -229,17 +275,7 @@ cursor: pointer;
 padding-bottom: 19px;
 }
 
-.mouse-coordinates{
-display: flex;
-justify-content: end;
-align-content: end;
-align-items: end;
-font-size: 12px;
-font-family: "IBM Plex Mono";
-padding-bottom: 19px;
-padding-right: 24px;
 
-}
 
 
 /* Estilos de modo oscuro */

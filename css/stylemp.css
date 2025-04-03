@@ -162,9 +162,9 @@ background-color: red;
 
 .contenido{
 display: grid;
-grid-template-columns: repeat(2,1fr);
+grid-template-columns: repeat(4,1fr);
 gap: 8px;
-max-width: 900px;
+max-width: 1000px;
 margin-left: 500px;
 }
 

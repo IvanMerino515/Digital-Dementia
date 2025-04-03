@@ -284,7 +284,16 @@ const images = [
     './assets/posters/turnstile.png',
     './assets/posters/raveonettes.png',
     './assets/posters/botanico.png',
-    './assets/posters/sss.png'
+    './assets/posters/sss.png',
+    './assets/posters/topographies.png',
+    './assets/posters/sonic.png',
+    './assets/posters/REDHOT.png',
+    './assets/posters/protomartyr.png',
+    './assets/posters/m83.png',
+    './assets/posters/IMPALA.png',
+    './assets/posters/FLAMING-LIPS.png',
+    './assets/posters/brian-jonestown.png',
+    './assets/posters/ALTINGUN.png',
 
 ];
 

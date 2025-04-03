@@ -179,8 +179,7 @@ font-size: 16px;
 
 
 
-.menu {
-    display: none; /* Ocultar menú inicialmente */
+/* .menu {
     margin-top: -20px;
     margin-right: 24px;
     flex-direction: column;
@@ -190,7 +189,7 @@ font-size: 16px;
     color: #222220;
     font-weight: 500;
     font-size: 16px;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .menudd {
@@ -241,8 +240,6 @@ padding-bottom: 19px;
 padding-right: 24px;
 
 }
-
-
 
 
 /* Estilos de modo oscuro */
@@ -310,6 +307,7 @@ position: absolute;
 bottom: 0;
 width: 100%; 
 margin-left: 10px;
+font-family: "IBM Plex Mono";
 
 }
 

@@ -353,8 +353,28 @@ images.forEach(src =>{
     contenido.appendChild(img);
 });
 
+
+
 function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+
+    // Activar o desactivar el listener de clic externo
+    if (menu.classList.contains("active")) {
+        document.addEventListener("click", closeMenuOnClickOutside);
+    } else {
+        document.removeEventListener("click", closeMenuOnClickOutside);
+    }
+}
+
+function closeMenuOnClickOutside(event) {
+    const menu = document.getElementById("mobileMenu");
+    const menuButton = document.querySelector(".menu-button");
+
+    if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+        menu.classList.remove("active");
+        document.removeEventListener("click", closeMenuOnClickOutside);
+    }
 }
 
 

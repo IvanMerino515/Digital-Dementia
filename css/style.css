@@ -39,110 +39,69 @@ position: inherit;
 
 }
 
-.logo{
-display: flex;
-align-content: center;
-justify-content: center;
-font-family: "Roboto", serif;
-font-weight: 900;
-font-size: 20vh;
-text-align: center;
-margin-top: -20px;
-color: #222220;
-
-}
-
-@media screen and (width < 768px){
-.logo{
-margin-top: 0;
-font-size: 45px;
-line-height: 0.9;  
-}
-}
-
-    
-
 
 .boxlogo{
 display: flex;
+flex-direction: column;
+justify-content: space-around;
 width: 396px;
-height: 507px;
-position: fixed;
-color: #22222000;
-margin-top: -100px;
+height: 107px;
+color: #222220;
     
 }
 
 .personal-data{
 display: flex;
-flex-direction: column;
-position: absolute;
-margin-top: 50px;
+flex-direction: row;
 font-family: "IBM Plex Mono";
 font-size: 14px;
-gap: 8px;
-font-weight: 500;
+gap: 14px;
 padding-left: 12px;
 color: #222220;
         
 }
 @media screen and (width < 768px){
 .personal-data{
-margin-top: 100px;    
-}
-}
-        
-.url{
-position: absolute;
-margin-top: 250px;
-margin-left: 170px;
-color: #222220;
-font-family: "IBM Plex Mono";
-font-size: 16px;
-font-weight: 500;
-padding-left: 12px;
-}
-.url::after{
-content: "";
-position: inherit;
-width: 157px;
-height: 1px;
-margin-top: 10px;
-margin-left: -343px;
-background-color: #222220;
+font-size: 12px;
+justify-content: space-between;
+padding-right: 24px;
 }
 
-@media screen and (width < 768px){
-.url{
-margin-top: 600px;    
+.boxlogo{
+ justify-content: start;   
+ gap: 12px;
 }
 }
+
+
 
 .social{
 display: flex;
-flex-direction: column;
-margin-top: 360px;
 padding-left: 12px;
 color: #222220;
 font-family: "IBM Plex Mono";
-font-size: px;
+font-size: 14px;
 line-height: 2;
-            
+gap: 14px;
+}
+
+@media screen and (width < 768px){
+.social{
+font-size: 12px;
+justify-content: space-between;
+padding-right: 24px;
+}
 }
 
 .menudd{
-    margin-top: 120px;
     display: flex;
-    padding-right: 20px;
-    flex-direction: column;
-    align-items: end;
-    gap: 19px;
+    flex-direction: row;
+    gap: 16px;
     font-family: "IBM Plex Mono";
     color: #222220;
-    font-weight: 700;
-    width: 100%;
-    font-size: 16px;
-    position: fixed;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 12px;
     
     }
 
@@ -157,6 +116,8 @@ line-height: 2;
 /* Estilos para el botón flotante */
 
 
+
+/* menu movil */
 .menu-button{
     display: none;
 }
@@ -203,39 +164,6 @@ line-height: 2;
 }
 
 
-/* @media screen and (width < 768px){
-.menudd{
-display: none;
-margin-top: 200px;
-}
-.menu{
-margin-top: -20px;
-margin-right: 24px;
-display: flex;
-flex-direction: column;
-align-items: end;
-gap: 19px;
-font-family: "IBM Plex Mono";
-color: #222220;
-font-weight: 500;
-font-size: 16px;
-}
-} */
-
-
-
-
-/* .menu {
-    margin-top: -20px;
-    margin-right: 24px;
-    flex-direction: column;
-    align-items: end;
-    gap: 19px;
-    font-family: "IBM Plex Mono";
-    color: #222220;
-    font-weight: 500;
-    font-size: 16px;
-} */
 
 @media screen and (max-width: 768px) {
     .menudd {
@@ -245,19 +173,63 @@ font-size: 16px;
 
 
 
- /* .menu-item:hover{
-    width: 600px;
-    justify-content: center;
-    align-content: center;
-    height: 30px;
-    background-color: #222220;
-    color: #BEBAB7;
-    transition: 0.4;
-    text-align: right;    
-    
-}  */
 
+/* content */
+.works{
+display: flex;
+flex-direction: column;
+gap: 14px;
+font-family: "IBM Plex Mono";
+font-size: 12px;
+color: #222220;
+max-width: 100rem;
+margin-top: 200px;
+}
 
+.item-project{
+display: flex;
+justify-content: space-between;
+padding-left: 12px;
+padding-top: 6px;
+padding-bottom: 6px;
+padding-right: 12px;
+}
+
+.item-project:hover {
+background: red; /* efecto de fondo sutil */
+color: #222220; /* opcional: color de texto en hover */
+}
+
+.client .year .tech{
+padding-right: 12px;
+}
+
+@media screen and (width < 768px){
+.works{
+margin-top: 36px;
+gap: 8px;
+}
+
+.item-project{
+align-content:start;
+padding-left: 12px;
+}
+
+.client{
+align-content:start;
+font-weight: 600;
+}
+
+.year{
+font-size: 10px;
+
+}
+
+.tech{
+font-size: 10px;
+
+}
+}
 
 .footer{
 display: flex;

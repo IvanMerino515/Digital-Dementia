@@ -380,6 +380,3 @@ function closeMenuOnClickOutside(event) {
 
 
 
-
-
-
